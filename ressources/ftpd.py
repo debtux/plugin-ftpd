@@ -119,7 +119,7 @@ class FTPserverThread(threading.Thread):
                         #traceback.print_exc()
                         self.conn.send("500 '" + cmd + "': command not understood.\r\n")
         else:
-            log('ERROR', "connexion refuser from " + addr[0])
+            log('ERROR', "connexion refused from " + addr[0])
             log('DEBUG', "Reply : 223 Sorry.")
             self.conn.send('223 Sorry.\r\n')
             self.conn.close()
